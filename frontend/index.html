@@ -1,13 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary meta -->
+    <title>Kråksjö Säteri — Frontend UI</title>
+    <meta name="description" content="Luxury forest‑house website built with Bun, Vite and Tailwind 4.1 for Kråksjö Säteri." />
+
+    <!-- Favicon + manifests -->
+    <link rel="icon" href="/vite.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#355e3b" />
+
+    <!-- Preload key fonts -->
+    <link rel="preload" href="/fonts/Stardom-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Sentient-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Performance / security -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Optional: prefer reduced motion -->
+    <meta name="color-scheme" content="light dark" />
   </head>
-  <body>
+
+  <body class="antialiased bg-[--color-bg] text-neutral-900 font-[--font-body]">
+    <noscript>You need to enable JavaScript to view this site.</noscript>
     <div id="root"></div>
+
+    <!-- App entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

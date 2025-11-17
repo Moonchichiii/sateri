@@ -1,17 +1,26 @@
 [project]
 name = "backend"
 version = "0.1.0"
-description = "Backend for KråkSjö project"
+description = "Backend for KråkSjö Säteri"
 requires-python = ">=3.12"
+
+dependencies = [
+  "Django>=5.2,<6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+]
 
 [tool.ruff]
 line-length = 88
 target-version = "py312"
 select = [
-  "A", "B", "C", "E", "F", "I", "N", "Q", "S", "T", "UP", "W", "YTT"
+  "A", "B", "C", "E", "F", "I", "N", "Q", "S", "T", "UP", "W", "YTT",
 ]
 ignore = [
-  "E501"  # Ignore line-length errors if handled by formatter
+  "E501",
 ]
 extend-exclude = ["venv", "frontend", "migrations"]
 
