@@ -1,0 +1,7 @@
+[install]
+# packages installed with bun instead of npm/yarn/pnpm
+dependencyManager = "bun"
+
+[run]
+# default dev/build tooling uses bun run scripts
+nodeInterop = true

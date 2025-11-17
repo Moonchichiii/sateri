@@ -1,0 +1,26 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Backend for KråkSjö project"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+select = [
+  "A", "B", "C", "E", "F", "I", "N", "Q", "S", "T", "UP", "W", "YTT"
+]
+ignore = [
+  "E501"  # Ignore line-length errors if handled by formatter
+]
+extend-exclude = ["venv", "frontend", "migrations"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "apps"]
+combine-as-imports = true
+force-sort-within-sections = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
