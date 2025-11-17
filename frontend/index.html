@@ -1,35 +1,53 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="sv" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Primary meta -->
-    <title>Kråksjö Säteri — Frontend UI</title>
-    <meta name="description" content="Luxury forest‑house website built with Bun, Vite and Tailwind 4.1 for Kråksjö Säteri." />
+    <title>Kråksjö Säteri — Skogsretreat</title>
+    <meta
+      name="description"
+      content="Kråksjö Säteri – skogsretreat i Småland. Stillhet, skog och sjö i brutalistisk design."
+    />
 
-    <!-- Favicon + manifests -->
-    <link rel="icon" href="/vite.svg" type="image/svg+xml" />
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+
+    <!-- Manifest / theme -->
     <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="theme-color" content="#355e3b" />
+    <meta name="theme-color" content="#3f7043" />
 
     <!-- Preload key fonts -->
-    <link rel="preload" href="/fonts/Stardom-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Sentient-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link
+      rel="preload"
+      href="/fonts/Stardom-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Sentient-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-    <!-- Performance / security -->
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="robots" content="index,follow" />
-
-    <!-- Optional: prefer reduced motion -->
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
   </head>
 
   <body class="antialiased bg-[--color-bg] text-neutral-900 font-[--font-body]">
-    <noscript>You need to enable JavaScript to view this site.</noscript>
+    <noscript>Du behöver aktivera JavaScript för att se den här sidan.</noscript>
     <div id="root"></div>
 
-    <!-- App entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,7 +1,11 @@
+import { QueryClientProvider } from "@tanstack/react-query";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App";
+
+import App from "@/App";
+import { queryClient } from "@/api/queryClient";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import "@/index.css";
 
 const rootElement = document.getElementById("root");
 
@@ -11,6 +15,10 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </QueryClientProvider>
   </StrictMode>
 );

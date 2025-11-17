@@ -15,14 +15,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 # --------------------------------------------------------------------
 
-# Read from .env in the backend folder:
-# DJANGO_SECRET_KEY=...
 SECRET_KEY = config("DJANGO_SECRET_KEY")
 
-# DJANGO_DEBUG=True/False in .env
 DEBUG = config("DJANGO_DEBUG", default=False, cast=bool)
 
-# DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost
 ALLOWED_HOSTS = config(
     "DJANGO_ALLOWED_HOSTS",
     default="127.0.0.1,localhost",
@@ -46,6 +42,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -109,13 +106,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # --------------------------------------------------------------------
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "sv"
 
-TIME_ZONE = "UTC"
+LANGUAGES = [
+    ("sv", "Svenska"),
+    ("de", "Deutsch"),
+    ("en", "English"),
+]
+
+TIME_ZONE = "Europe/Stockholm"
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
+
+LOCALE_PATHS = [
+    BASE_DIR / "locale",
+]
 
 
 # --------------------------------------------------------------------
