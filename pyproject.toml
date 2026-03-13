@@ -1,0 +1,16 @@
+[project]
+name = "sateri"
+version = "0.1.0"
+description = "Backend scaffold for the Sateri project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "Django==6.0.*",
+  "python-decouple==3.8",
+]
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+package = false
