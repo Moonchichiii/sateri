@@ -1,8 +1,10 @@
 from decouple import config
 
-DJANGO_ENV = config("DJANGO_ENV", default="local")
+DJANGO_ENV = config("DJANGO_ENV", default="development")
 
 if DJANGO_ENV == "production":
     from .production import *
+elif DJANGO_ENV == "test":
+    from .test import *
 else:
-    from .local import *
+    from .development import *
