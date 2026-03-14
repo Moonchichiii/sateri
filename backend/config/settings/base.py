@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "core",
+    "apps.accounts",
 ]
 
 MIDDLEWARE = [
@@ -79,3 +80,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = config("DJANGO_CORS_ALLOW_ALL_ORIGINS", default=False, cast=bool)
+
+
+AUTH_USER_MODEL = "accounts.User"
