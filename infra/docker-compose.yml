@@ -4,7 +4,7 @@ services:
     environment:
       POSTGRES_DB: hunting_house
       POSTGRES_USER: hunting
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-localdev}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
